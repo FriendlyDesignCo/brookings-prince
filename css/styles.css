@@ -7225,7 +7225,7 @@ fill: #808080;
   float: right;
   width: 88%;
   line-height: 1.4em;
-  height: 6em;
+  height: 7em;
 }
 
 .textContainer.pull-left {
@@ -7261,7 +7261,8 @@ fill: #808080;
   }
 }
 
-.mediaContainer.pull-left {
+.mediaContainer.pull-left,
+.mediaContainer.pull-right {
   position: relative;
 }
 
@@ -7271,12 +7272,22 @@ fill: #808080;
     margin-right: -35% !important;
     width: 70%;
   }
+
+  .mediaContainer.pull-right {
+    right: -42%;
+    margin-left: -35% !important;
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .mediaContainer.pull-left {
     left: -81.7%;
     margin-right: -70% !important;
+  }
+  .mediaContainer.pull-right {
+    right: -81.7%;
+    margin-left: -70% !important;
   }
 }
 
@@ -7294,12 +7305,16 @@ fill: #808080;
 
 @media screen and (min-width: 766px) {
   .mediaContainer.pull-right.hang {
+    right: 0;
+    margin-left: 2em !important;
     margin-right: -40% !important;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .mediaContainer.pull-right.hang {
+    right: 0;
+    margin-left: 2em !important;
     margin-right: -70% !important;
   } 
 }
