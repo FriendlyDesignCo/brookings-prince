@@ -1,5 +1,14 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+* {
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

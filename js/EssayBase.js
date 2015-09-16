@@ -179,8 +179,15 @@ var animateContent = function() {
   });
 };
 
+var widowFixCount = 0;
 $(document).ready(function(){ 
   setInterval(function() {
     animateContent();
   }, 200);
+
+  // DRF is firing twice, so avoid this for widowFix by incrementing widowFixCount variable.
+  if (widowFixCount == 0) {
+    $('.content p, .content h3, .content h2, .content blockquote').widowFix();
+    widowFixCount++;
+  }
 });
