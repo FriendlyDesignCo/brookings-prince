@@ -4240,7 +4240,7 @@ input[type="button"].btn-block {
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: #fff;
+  color: #999;
   background-color: #044F8A;
 }
 
@@ -4762,7 +4762,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: #fff;
+  color: #999;
   background-color: transparent;
 }
 
@@ -6919,7 +6919,12 @@ td.visible-print {
 
 .navbar-header #essaytitle {
   display: none;
+  color: #999 !important;
 }
+/*.navbar-inverse .navbar-brand #essaytitle:hover,
+.navbar-inverse .navbar-brand #essaytitle span:hover {
+  color: inherit;
+}*/
 
 @media screen and (min-width: 766px) {
   .navbar-header #essaytitle {
@@ -6945,9 +6950,9 @@ fill: #808080;
   background: #fff;
   overflow: hidden;
   overflow-x: hidden;
-  -webkit-box-shadow: 0px -6px 26px 4px rgba(50, 50, 50, 0.64);
-  -moz-box-shadow: 0px -6px 26px 4px rgba(50, 50, 50, 0.64);
-  box-shadow: 0px -6px 26px 4px rgba(50, 50, 50, 0.64);
+  -webkit-box-shadow: 0px -6px 26px 4px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow: 0px -6px 26px 4px rgba(50, 50, 50, 0.34);
+  box-shadow: 0px -6px 26px 4px rgba(50, 50, 50, 0.34);
   background: #fff;
 }
 
@@ -7250,7 +7255,7 @@ fill: #808080;
 }
 @media screen and (min-width: 1200px) {
   .textContainer.hang-left {
-    margin-left: -70%;
+    margin-left: -50%;
     margin-right: 5%;
   }
 }
@@ -7276,7 +7281,7 @@ fill: #808080;
   .mediaContainer.pull-right {
     right: -42%;
     margin-left: -35% !important;
-    width: 70%;
+    /*width: 70%;*/
   }
 }
 
@@ -7329,6 +7334,12 @@ fill: #808080;
 @media screen and (min-width: 766px) {
   .mediaContainer.hang-left {
     margin-left: -30%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mediaContainer.hang-left {
+    margin-left: -50%;
     margin-right: 5%;
   }
 }
@@ -7794,7 +7805,7 @@ html {
 
 .section p {
   font-family: "Georgia";
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 200;
 }
 
@@ -10387,8 +10398,12 @@ img.center {
 /* BEGIN FRIENDLY EDITS */
 .header-image .section {
   padding: 50px 0 0;
-  background-color: #006935;
+  background-color: #fff;
   text-align: center;
+  overflow: visible;
+}
+.header-image .section > div {
+  float: none;
 }
 .header-image img {
   width: 100%;
@@ -10398,8 +10413,8 @@ img.center {
 .header-image cite {
   position: absolute;
   right: 1em; 
-  bottom: 0.5em;
-  color: rgba(255,255,255,0.5) !important;
+  bottom: -3em;
+  color: #999;
 }
 
 .animation-container {
@@ -10425,14 +10440,17 @@ img.center {
 }
 .key-figure-carousel .carousel-inner > .item > img, 
 .key-figure-carousel .carousel-inner > .item > a > img {
-  max-width: 75%;
+  max-width: 85%;
 }
 .key-figure-carousel a.carousel-control:hover {
   color: #003D1C;
 }
+.key-figure-carousel a.carousel-control.left {
+  margin-left: -8.5%;
+}
 
 .line-of-succession h3 {
-  color: #003D1C;
+  color: #006C35;
 }
 .line-of-succession img {
   width: 100%;
