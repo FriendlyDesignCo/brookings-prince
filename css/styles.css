@@ -7847,12 +7847,18 @@ html {
 
 .content {
   position: relative;
-  max-width: 900px;
+  max-width: 1100px;
   padding-top: 3em;
   padding-right: 6%;
   padding-left: 6%;
   padding-bottom: 3em;
   background: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .content {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 img.pull-right {
@@ -10495,7 +10501,8 @@ img.center {
   max-width: 1500px;
   float: none;
   margin: 0 auto;
-  padding: 4em 0;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 .line-of-succession h3 {
   color: #006C35;
@@ -10503,6 +10510,10 @@ img.center {
 .line-of-succession img {
   width: 100%;
   /*max-width: 1200px;*/
+}
+
+.mediaContainer.tall-image img {
+  max-width: 400px;
 }
 
 /*# sourceMappingURL=styles.css.map */
