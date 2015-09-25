@@ -6925,6 +6925,11 @@ td.visible-print {
     width: 70%;
   }
 }
+@media screen and (max-width: 480px) {
+  .navbar-header {
+    width: 100%;
+  } 
+}
 
 .navbar-header #essaytitle {
   display: none;
@@ -7284,7 +7289,7 @@ fill: #808080;
   .mediaContainer.pull-left {
     left: -38%;
     margin-right: -31% !important;
-    width: 70%;
+    /*width: 70%;*/
   }
 
   .mediaContainer.pull-right {
