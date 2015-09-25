@@ -57,7 +57,8 @@
 <!-- CUSTOM PLUGINS AND STYLING -->
 <link type="text/css" rel="stylesheet" href="/~/media/Research/Files/essays/theprinceofcounterterrorism/jqueryfancybox134.css" />
 <!-- <link type="text/css" rel="stylesheet" href="/~/media/Research/Files/essays/theprinceofcounterterrorism/jquery.css">
- --><link type="text/css" rel="stylesheet" href="/~/media/Research/Files/essays/theprinceofcounterterrorism/Essay201503.css">
+ -->
+ <!-- <link type="text/css" rel="stylesheet" href="/~/media/Research/Files/essays/theprinceofcounterterrorism/Essay201503.css"> -->
 <meta name="twitter:widgets:csp" content="on">
 
    <!-- FAVICON --------------------------------- -->
@@ -122,6 +123,140 @@ major research and recommendations from Brookings Scholars.</div>
     </div>
   </div>
 </div>
+
+
+<!-- ************* Start of FANCYBOX Email Signup Box -->
+<script type="text/javascript" src="/Multimedia/Scripts/jQuery/jqueryfancybox_1_3_4_patch"></script>
+<script type="text/javascript" src="/Multimedia/Scripts/jQuery/jquerycookie"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  if (($.cookie('BrookSignupEssaySeen') != "true") && ($( window ).width() > 979)) {
+    $('#ch1').waypoint(function() {
+      showSignupBox();
+    });
+  }
+});
+
+function showSignupBox() {
+  if ($.cookie('BrookSignupEssaySeen') == "true") {
+    return true;
+  }
+
+  $.fancybox({
+    href: "#eam",
+    modal: false,
+    showCloseButton: false,
+    centerOnScroll: true,
+    padding: 0,
+    hideOnOverlayClick: false
+  });
+
+        $('.email-close').fancybox({
+          helpers: {
+            overlay: {
+              locked: false
+            }
+          }
+        });
+
+  $.cookie('BrookSignupEssaySeen', 'true', { expires: 180 } );
+}
+
+function validateForm(formId, emailboxId, emailErrorId) {
+  if (Page_ClientValidate(emailboxId)) {
+    $('#' + emailErrorId).hide();
+    document.getElementById(formId).submit();
+    setTimeout(function(){$.fancybox.close();},5000);
+    
+    try {
+      newsletter(); // In EssayBase
+    }
+    catch (err) {}
+  }
+  else {
+    $('#' + emailErrorId).show();
+    return false;
+  }
+}
+
+function runScript(e) {
+  if (e.keyCode == 13) {
+    validateForm('formNewsletter', 'emailNewsletter', 'emailError');    
+  }
+}
+
+function Page_ClientValidate(emailboxId) {
+  if (isEmail($('#' + emailboxId).val())) {
+    $(".email-body .email-headline").html("Thank you for subscribing!<br /><br /><a href='/Newsletters'>You can also view other Brookings newsletters available</a>.");
+    $(".email-body .newsletter-group").hide();
+    $(".email-body .input-submit").hide();
+    return true;
+  }
+
+  return false;
+}
+
+function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+</script>
+
+<div style="display:none;">
+  <div id="eam" class="email-mod-outer">
+    <div id="ctl12_pnlEmailModal" class="email-mod" data-modal-id="{35E9D7F5-1B77-4A9B-881B-6C3F4BC1F5D9}">
+
+<form id="formNewsletter" action="https://forms.hubspot.com/uploads/form/v2/241939/8981e015-ce06-406d-85da-7a7ddc886091" method="post" target="hiddenframe" onsubmit="return validateForm('formNewsletter', 'emailNewsletter', 'emailError')">
+
+      <div class="email-head">
+        <div class="email-title">Hear More from Brookings</div>
+        <span class="email-close"><a href="#" onclick="$.fancybox.close
+
+();"></a></span>
+      </div>
+
+  <div id="formBody" class="email-body">
+        <p class="email-headline">Enter your email address and we'll make sure you're the first to know about any new Brookings Essays, or other major research and recommendations from Brookings Scholars.</p>
+
+    <ul class="multi-email-description newsletter-group" style="display: none;">
+      <li class="newsletterLi">
+        <span class="newsletterCB"><input 
+id="ctl12_nlNewsletters_repNewsletterList_cbNewsletter_0" type="checkbox" name="ctl12$nlNewsletters$repNewsletterList$ctl01$cbNewsletter" Value="{35E9D7F5-1B77-4A9B-881B-6C3F4BC1F5D9}" disabled checked /></span>
+        <div class="description">
+          <label class='email-headline' 
+
+for='ctl12_nlNewsletters_repNewsletterList_cbNewsletter_0'>The Brookings Essay</label>
+          <p class='email-description'>
+            [[[A twice monthly update on ideas for tax, business, health and social policy from the Economic Studies program at Brookings.]]]
+          </p>
+
+        </div>
+      </li>
+    </ul>
+        <input type="hidden" id="eamSelectedNewsletters" 
+
+name="eamSelectedNewsletters" />
+
+<input id="emailNewsletter" type="email" name="email" placeholder="Enter your email address" size="40" onkeypress="return runScript(event)" class="email eam-email" />
+<input id="btnSubmit" type="submit" value="Submit" class="submit" />
+
+<iframe id="hiddenframe" name="hiddenframe" style="display:none"></iframe>
+
+  <div id="emailError" class="error" style="display:none;">Please enter a valid email address.</div>
+      </div>
+    <script>
+  $("#todrop").hide();
+  $("#toclick").click(function(){ $("#todrop").slideToggle("blind");});
+    </script>
+
+</form>
+
+
+    </div>
+  </div>    
+</div>
+
+<!-- ************* End of FANCYBOX Email Signup Box -->
 
 <!-- **********************NEW POST 3SPOT: form validation stuff from 'essay base'*******************-->
 <script type="text/javascript">
