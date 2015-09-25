@@ -7282,14 +7282,14 @@ fill: #808080;
 
 @media screen and (min-width: 766px) {
   .mediaContainer.pull-left {
-    left: -42%;
-    margin-right: -35% !important;
+    left: -38%;
+    margin-right: -31% !important;
     width: 70%;
   }
 
   .mediaContainer.pull-right {
-    right: -42%;
-    margin-left: -35% !important;
+    right: -38%;
+    margin-left: -31% !important;
     /*width: 70%;*/
   }
 }

@@ -1,0 +1,465 @@
+<script src="/~/media/Research/Files/essays/friendly_essay/pluginsJS.js"></script>
+<!-- END JAVASCRIPT SUPPORT ------------------------------------------------------------- --> 
+
+
+<!--HANS'S LIST OF SCRIPTS TO GET RID OF BROOK UNDEFINED PAGE ERRORS, ETC. THIS GOES AFTER JQUERY REF-->
+<script type="text/javascript" src="/assets/js/libs/mbox.js"></script>
+<script type="text/javascript" src="/assets/js/libs/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" src="/assets/js/libs/equal-heights.js"></script>
+<!--plugins.js commented out bc it wraps youtube video player in div that mucks aspect and positioning -->
+<!--<script type="text/javascript" src="/assets/js/plugins.js"></script>-->
+<!--global.js commented out bc throws 'undefined is not a function' error with BROOK -->
+<!--<script type="text/javascript" src="/assets/js/global.js"></script>-->
+<!--END HAN'S FIXES-->	
+
+
+
+<!-- ************* Start of Email Signup Box -->
+
+<div style="display:none;" class="hidden-xs">
+	<div id="eam" class="email-mod-outer">
+		<div id="ctl12_pnlEmailModal" class="email-mod" data-modal-id="{35E9D7F5-1B77-4A9B-881B-6C3F4BC1F5D9}">
+
+<form id="formNewsletter" action="https://forms.hubspot.com/uploads/form/v2/241939/6233c262-0051-4794-b78f-ff2bea49366b" method="post" target="hiddenframe" onsubmit="return validateForm('formNewsletter', 'emailNewsletter', 'emailError')">
+
+			<div class="email-head">
+				<div class="email-title">Hear More from Brookings</div>
+				<span class="email-close"><a href="#" onclick="$.fancybox.close
+
+();"></a></span>
+			</div>
+
+	<div id="formBody" class="email-body">
+				<p class="email-headline">Enter your email address and we'll make 
+sure you're the first to know about any new Brookings Essays, or other 
+major research and recommendations from Brookings Scholars.</p>
+
+		<ul class="multi-email-description newsletter-group" style="display: none;">
+			<li class="newsletterLi">
+				<span class="newsletterCB"><input id="ctl12_nlNewsletters_repNewsletterList_cbNewsletter_0" name="ctl12$nlNewsletters$repNewsletterList$ctl01$cbNewsletter" value="{35E9D7F5-1B77-4A9B-881B-6C3F4BC1F5D9}" disabled="disabled" checked="checked" type="checkbox"></span>
+				<div class="description">
+					<label class="email-headline" for="ctl12_nlNewsletters_repNewsletterList_cbNewsletter_0">The Brookings Essay</label>
+					<p class="email-description">
+						[[[A twice monthly update on ideas for tax, business, health and 
+social policy from the Economic Studies program at Brookings.]]]
+					</p>
+
+				</div>
+			</li>
+		</ul>
+				<input id="eamSelectedNewsletters" name="eamSelectedNewsletters" type="hidden">
+
+<input id="emailNewsletter" name="email" placeholder="Enter email address for more from Brookings" size="40" onkeypress="return runScript(event)" class="email eam-email" type="email">
+<input id="btnSubmit" value="Submit" class="submit" type="submit">
+
+<iframe id="hiddenframe" name="hiddenframe" style="display:none"></iframe>
+
+	<div id="emailError" class="error" style="display:none;">Please enter a valid email address.</div>
+      </div>
+    <script>
+	$("#todrop").hide();
+	$("#toclick").click(function(){ $("#todrop").slideToggle("blind");});
+    </script>
+
+</form>
+
+
+		</div>
+	</div>		
+</div>
+
+<!-- ************* End of FANCYBOX Email Signup Box -->
+
+
+<!-- CONTENT JAVASCRIPTS ------------------------------------------------------------- -->
+
+<!-- touchscreen compatibility -->
+<!-- <script src="/~/media/Research/Files/essays/friendly_essay/javascripts/jquery_ui_touch_punch_min.js"></script>	-->
+
+
+<!-- JAVASCRIPT SUPPORT ------------------------------------------------------------- -->	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- <script src="/~/media/Research/Files/essays/friendly_essay/javascripts/jquery.js"></script> -->
+<!-- END jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Compiled plugins for Bootstrap -->
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/affix.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/alert.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/button.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/carousel.js"></script>
+<!-- <script src="http://www.brookings.edu/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/collapse.js"></script> -->
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/dropdown.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/modal.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/tooltip.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/popover.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/scrollspy.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/tab.js"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/bootstrap/transition.js"></script>
+<script type="text/javascript" src="/~/media/Research/Files/essays/theprinceofcounterterrorism/jquerywidowfix.js"></script>
+<!-- END Compiled plugins for Bootstrap -->
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/main.js"></script>
+<!-- END JAVASCRIPT SUPPORT ------------------------------------------------------------- -->	
+
+
+<!-- bootstrap carousel-->
+  <script type="text/javascript">
+$(document).ready(function(){
+     $("#myCarousel").carousel({
+         interval : false,
+        /* pause: true*/
+     });
+});
+</script>
+<!--end carousel-->
+
+<!-- BEGIN Hubspot code -->
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#todrop").hide();
+  $("#toclick").click(function(){ $("#todrop").slideToggle("blind");});
+});
+</script>
+<!-- END Hubspot code -->
+
+<!-- BEGIN Background Image Full Width (For IE8+) -->
+<!-- /* See https://github.com/louisremi/jquery.backgroundSize.js */ -->
+<!-- <script src="/~/media/Research/Files/essays/friendly_essay/javascripts/jquery_004.js"></script> -->
+<script>
+$("#intro").css({backgroundSize: "cover"});
+</script>
+<!-- END Background Image Full Width (For IE8+) -->
+
+<!-- BEGIN Responsive Images -->
+<!-- Using Picturefill (http://scottjehl.github.io/picturefill) -->
+<!-- The Modernizr build *must* create the picture element -->
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/vendor/picturefill.min.js" async></script>
+<!-- END Responsive Images -->
+
+
+
+<!-- Lazy Load -->
+<!-- <script type="text/javascript" src="/~/media/Research/Files/essays/friendly_essay/javascripts/jquery_002.js"></script> -->
+<!-- Lazy Load example -->
+<script>
+	/*  Syntax: http://www.appelsiini.net/projects/lazyload   */
+	$('#lazy-load').lazyload({
+		threshold: 20
+	});
+</script>
+<!-- END Lazy Load -->	
+
+<!-- Social Sharing with Add This -->
+<!-- For options, see www.addthis.com/dashboard -->
+<!-- Changes to the addthis.com widget will add new toolbars to appear on the page! -->
+<script type="text/javascript" src="/~/media/Research/Files/essays/theprinceofcounterterrorism/sh_data/addthis_widget.js"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe src="/~/media/Research/Files/essays/theprinceofcounterterrorism/sh.html" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;" title="AddThis utility frame" id="_atssh770"></iframe></div>
+<!-- END Add This -->
+
+
+
+<!--Code for Scrollspy (sticky header and waypoints)-->
+<script>
+$('body').scrollspy({ target: '.navbar-main' })
+  ///////////////////////
+  //Code to offset the anchor link go-to click height 
+  var offset = 80;
+  $('.navbar li a').click(function(event) {
+    event.preventDefault();
+    $($(this).attr('href'))[0].scrollIntoView();
+    scrollBy(0, -offset);
+  });
+  ///////////////////////
+  </script>
+<!--END code for Scrollspy (sticky header and waypoints)-->
+
+
+
+
+<!-- BEGIN Clearing Lightbox -->
+<link rel="stylesheet" type="text/css" href="/~/media/Research/Files/essays/friendly_essay/stylesheets/lightbox.css" />
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/vendor/lightbox.js"></script>
+<!-- END Clearing Lightbox -->
+
+<!--Code for social image sharing via SlingPic-->
+<script src="http://cdn.slingpic.com/js/slingpic.plugin.js"></script>
+
+<script>
+	/*	To attach sharing functions to an image,
+			give that image the class 'sharable'. */
+	jQuery(window).load(function(){
+		jQuery(".sharable").slingPic({
+			theme: "subtle",
+			autoShowShare: true,
+			context: true
+		});
+	});
+</script>
+<!--END Code for social image sharing-->		
+
+<!-- BEGIN JavaScript transitions -->
+<!-- uses jquery.transit (http://ricostacruz.com/jquery.transit/) -->
+<!-- <script src="/~/media/Research/Files/essays/friendly_essay/javascripts/jquery_005.js"></script>
+<script> -->
+/* for browsers that don't support CSS3 transitions, remap to jQuery animate(). */
+if (!$.support.transition)
+	$.fn.transition = $.fn.animate;
+</script>
+<!-- BEGIN JavaScript transitions example -->
+<script>
+	$('#js-transitions-target').click(function(){ 
+		$(this)
+		.transition({ "margin-left": "600px" }, "slow" )
+		.transition({ opacity: 0.1 });
+	});
+</script>
+<!-- END JavaScript transitions -->
+
+<!-- END CONTENT JAVASCRIPTS ------------------------------------------------------------- -->	
+
+
+
+
+<!-- JAVASCRIPT EXAMPLES ------------------------------------------------------------- -->	
+<!--waypoints- Marcia's addition-->
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/vendor/waypoint.js" type="text/javascript"></script>
+<script src="/~/media/Research/Files/essays/friendly_essay/javascripts/vendor/sticky.js" type="text/javascript"></script>
+
+
+
+<!-- move intrusive elements to bottom of page for phone size and back in on wider-->
+<script>
+
+
+$(document).ready(function() {
+
+
+
+//var recite = document.getElementById("recite");
+
+// this is going back to original- paired with audio tag in HTML
+//var recite = document.getElementsByTagName("audio")[0];
+
+  
+//audio bit
+     $("#audioobject").css('display', 'none');
+    /* $("#hearaudio").click(function(){
+        $("audioobject").toggle(500);
+       
+      
+    });*/
+
+
+
+
+
+/*  if($('#audiohidden').css('display') == 'block') {
+            $('#recite').play();
+            $(recite).css('border', '3px solid green');
+            }
+            
+        if($('#audiohidden').css('display') == 'none') {
+             $('#recite').pause();
+            }
+*/
+
+
+   $('.about').hover(function()
+{
+ 
+            $('> .reveal', this).toggleClass('shown');
+});
+
+//redo toggle with own class names bc of SC conflict         
+ $(".myAccordion .toggle").click(function(){
+     
+        $(".myAccordion .myhiddenContent").slideToggle(500);
+    });
+
+
+  var $window = $(window);
+     
+  var getWidth = function() {
+         return $(window).width();
+     };
+     
+  // Save initial width to compare against on resize to weed out false resize events
+ var curWidth = getWidth();
+ 	
+ 
+ // Set inline heights for waypoints plugin, init plugins
+var wideView = function() {
+    
+    
+
+/*THIS IS RIGHT ONE  */ 
+$('.new-sticky-example').each(function(){
+       var sticky = new Waypoint.Sticky({
+  element: $(this),
+  /* offset:'bottom-in-view'*/
+  });
+
+});
+
+
+$('.bottom-sticky-example').each(function(){
+       var sticky = new Waypoint.Sticky({
+  element: $(this),
+ offset:'bottom-in-view'
+  });
+
+});
+
+
+
+      	
+    $('#bookpromo').insertAfter('#prepromo');
+	$('#further').insertAfter('#prefurther');
+		
+		
+     };
+     
+ var narrowView = function() {   
+		$('#bookpromo').insertAfter('#lastp');
+		$('#further').insertAfter('#bookpromo');
+		
+ };
+ 
+   var mediaquery = function( width ) {
+        if ( width > 651 ) {
+            wideView();
+
+        }
+        else {
+            narrowView();
+        }
+    };
+	
+    
+    
+       /* Debounce code from underscore.js - http://underscorejs.org/ */
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
+    var debounce = function(func, wait, immediate) {
+        var timeout, result;
+        return function() {
+            var context = this,
+                args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) result = func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) result = func.apply(context, args);
+            return result;
+        };
+    };
+    
+    
+    // Run on window resize, debounced to improve performance
+    $window.bind('resize', debounce(function( evt ) {
+        // Make sure width has actually changed, iOS triggers resize on scroll sometimes (http://jsbin.com/igocaf/latest)
+        if ( getWidth() !== curWidth ) {
+ 
+            // Update width
+            curWidth = getWidth();
+            
+            // Run wide/narrow view scripts
+            mediaquery( curWidth );
+        }
+    }, 200)); // 200 is the debounce interval to wait before triggering
+     
+     
+	
+    
+    
+        // Run wide/narrow view scripts (out of resize even to run on page load
+            mediaquery( curWidth );	 
+});
+
+//this is a hack to fix disqus height of zero problem in IE edge
+ $('#dsq-1').css('height', 'auto !important');
+</script>
+
+<script>
+
+$('#audiodiv .toggle').click(function(){
+   
+if($('#audiohidden.hiddenContent').css('display') === 'none') {
+            recite.play();
+          
+            };
+            
+if($('#audiohidden.hiddenContent').css('display') === 'block') {
+            recite.pause();
+          
+            };
+    
+    
+    });
+
+$(window).load(function() 
+{
+   // executes when complete page is fully loaded, including all frames, objects and images
+// var recite = document.getElementsByTagName("audio")[0];
+
+var recite = document.getElementById("notrecite");
+});  
+
+   </script>
+
+<!-- BEGIN Tooltip Example -->
+<script>
+$('[data-toggle="tooltip"]').tooltip({container: 'body'});
+</script>
+<!-- END Tooltip Example -->
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.server = "WEBPFE22";
+s.prop55 = "The Prince of Counterterrorism";
+s.prop75 = "{1C2F67B8-E3CD-4FAD-A1E4-60FA004BC756}";
+s.eVar34 = "intelligence";
+s.prop17 = "foreign policy";
+s.prop32 = "middle east policy";
+s.eVar32 = "middle east policy";
+s.eVar12 = "The Prince of Counterterrorism";
+s.prop12 = "The Prince of Counterterrorism";
+s.eVar30 = "foreign policy";
+s.prop13 = "{1C2F67B8-E3CD-4FAD-A1E4-60FA004BC756}";
+s.prop14 = "website";
+s.events = "event29";
+s.eVar47 = "Research";
+s.eVar44 = "Traditional PC";
+s.eVar17 = "foreign policy";
+s.eVar14 = "website";
+s.prop42 = "Traditional PC";
+s.prop30 = "foreign policy";
+s.eVar55 = "The Prince of Counterterrorism";
+s.eVar28 = "The Brookings Essay";
+s.eVar18 = "middle east policy";
+s.eVar19 = "intelligence";
+s.prop18 = "middle east policy";
+s.eVar13 = "{1C2F67B8-E3CD-4FAD-A1E4-60FA004BC756}";
+s.prop19 = "intelligence";
+s.prop40 = "The Brookings Essay";
+s.channel = "Research";
+s.prop34 = "intelligence";
+s.prop15 = "Terrorism|Islamist Movements|Middle East and North Africa|Saudi Arabia";
+s.prop16 = "Bruce Riedel";
+s.prop17 = "communications";
+
+  clearEvars();
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+
+
+
+
+
+<!-- END JAVASCRIPT EXAMPLES ------------------------------------------------------------- -->	
